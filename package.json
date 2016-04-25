@@ -1,0 +1,40 @@
+{
+  "name": "yowl-examples",
+  "version": "0.1.0",
+  "description": "Examples for the yowl chat bot framework",
+  "main": "index.js",
+  "dependencies": {
+    "yowl": "^0.1.1",
+    "yowl-context-memory": "^0.1.0",
+    "yowl-context-rethink": "^0.1.0",
+    "yowl-dialog-manager": "^0.1.0",
+    "yowl-lock-redis": "^0.1.0",
+    "yowl-platform-cli": "^0.1.1"
+  },
+  "devDependencies": {
+    "jshint": "latest",
+    "browserify": "latest",
+    "mocha": "latest"
+  },
+  "scripts": {
+    "lint": "jshint ./examples/**/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brianbrunner/yowl-examples.git"
+  },
+  "keywords": [
+    "chatbot",
+    "yowl"
+  ],
+  "author": "Brian Brunner (brian.brunner@gmail.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/brianbrunner/yowl-examples/issues"
+  },
+  "jshintConfig": {
+    "node": true,
+    "proto": true
+  },
+  "homepage": "https://github.com/brianbrunner/yowl-examples#readme"
+}
