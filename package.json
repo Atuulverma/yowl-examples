@@ -4,13 +4,13 @@
   "description": "Examples for the yowl chat bot framework",
   "main": "index.js",
   "dependencies": {
-    "yowl": "^0.1.1",
+    "yowl": "^0.1.6",
+    "yowl-classifier-bayes": "^0.1.1",
     "yowl-context-memory": "^0.1.0",
     "yowl-context-rethink": "^0.1.0",
     "yowl-dialog-manager": "^0.1.0",
     "yowl-lock-redis": "^0.1.0",
-    "yowl-platform-cli": "^0.1.1",
-    "yowl-classifier-bayes": "^0.1.1"
+    "yowl-platform-cli": "^0.1.1"
   },
   "devDependencies": {
     "jshint": "latest",
