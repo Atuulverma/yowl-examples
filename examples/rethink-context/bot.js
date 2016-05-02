@@ -11,12 +11,12 @@ bot.use(rethink());
 
 bot.use(function(context, event, callback) {
   var message;
-  if (context.previous_message) {
-    message = 'The last thing you said to me was "' + context.previous_message + '"';
+  if (context.session.previous_message) {
+    message = 'The last thing you said to me was "' + context.session.previous_message + '"';
   } else {
     message = "No previous message to repeat";
   }
-  context.previous_message = event.message;
+  context.session.previous_message = event.message;
   event.send(context, event, message, callback);
 });
 
