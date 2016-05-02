@@ -1,6 +1,6 @@
 {
   "name": "yowl-examples",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Examples for the yowl chat bot framework",
   "main": "index.js",
   "dependencies": {
