@@ -17,7 +17,7 @@ bot.use(function(context, event, callback) {
     message = "No previous message to repeat";
   }
   context.session.previous_message = event.message;
-  event.send(context, event, message, callback);
+  event.send(message, callback);
 });
 
 bot.run();

@@ -16,7 +16,7 @@ bot.use(function(context, event, next) {
   var message = event.message;
   var echoes_left = num_echoes;
   var echo = function() {
-    event.send(context, event, message, function() {
+    event.send(message, function() {
       if (echoes_left-- > 0) {
         setTimeout(echo, echo_delay);
       } else {
