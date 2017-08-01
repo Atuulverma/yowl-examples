@@ -13,6 +13,7 @@ Implementation examples for yowl modules.
 ## Context Persistence
 
 [Redis Context Persistence](examples/redis-context/bot.js)
+
 [Rethink Context Persistence](examples/rethink-context/bot.js)
 
 ## Dialog Manager
