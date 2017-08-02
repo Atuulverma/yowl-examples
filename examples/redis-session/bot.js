@@ -1,13 +1,13 @@
 var yowl = require('yowl');
 var bot = yowl();
 
-bot.display_name = "Redis Context Bot";
+bot.display_name = "Redis Session Bot";
 
 var local = require('yowl-platform-cli');
 bot.extend(local);
 
-var redisContext = require('yowl-context-redis');
-bot.use(redisContext());
+var redisSession = require('yowl-session-redis');
+bot.use(redisSession());
 
 bot.use(function(context, event, callback) {
   var message;

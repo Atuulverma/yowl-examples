@@ -6,8 +6,9 @@
   "dependencies": {
     "yowl": "latest",
     "yowl-classifier-bayes": "latest",
-    "yowl-context-memory": "latest",
-    "yowl-context-rethink": "latest",
+    "yowl-session-memory": "latest",
+    "yowl-session-rethink": "latest",
+    "yowl-session-redis": "latest",
     "yowl-dialog-manager": "latest",
     "yowl-lock-redis": "latest",
     "yowl-platform-cli": "latest"

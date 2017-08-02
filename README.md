@@ -2,6 +2,12 @@
 
 Implementation examples for yowl modules.
 
+To run an example and interact with it locally, use:
+
+```
+node <example>.js --local
+```
+
 ## General Examples
 
 [Basic Echo Bot](examples/echo/bot.js)
@@ -10,11 +16,11 @@ Implementation examples for yowl modules.
 
 [Naive Bayes Classifier](examples/classification/bot.js)
 
-## Context Persistence
+## Session Persistence
 
-[Redis Context Persistence](examples/redis-context/bot.js)
+[Redis Session Persistence](examples/redis-session/bot.js)
 
-[Rethink Context Persistence](examples/rethink-context/bot.js)
+[Rethink Session Persistence](examples/rethink-session/bot.js)
 
 ## Dialog Manager
 

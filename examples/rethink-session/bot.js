@@ -6,7 +6,7 @@ bot.name = "Echo Bot";
 var local = require('yowl-platform-cli');
 bot.extend(local);
 
-var rethink = require('yowl-context-rethink');
+var rethink = require('yowl-session-rethink');
 bot.use(rethink());
 
 bot.use(function(context, event, callback) {

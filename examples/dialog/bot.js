@@ -6,7 +6,7 @@ bot.name = "Echo Bot";
 var local = require('yowl-platform-cli');
 bot.extend(local);
 
-var memory = require('yowl-context-memory');
+var memory = require('yowl-session-memory');
 bot.use(memory);
 
 var DialogManager = require('yowl-dialog-manager')();
