@@ -14,6 +14,8 @@ node <example>.js --local
 
 [Websocket Echo Bot with UI](examples/web/)
 
+[Facebook Echo Bot](examples/facebook/bot.js)
+
 ## Classification
 
 [Naive Bayes Classifier](examples/classification/bot.js)
