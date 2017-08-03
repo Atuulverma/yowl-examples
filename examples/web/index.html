@@ -1,0 +1,140 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Echo Bot</title>
+  <script src='/socket/client.js'></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    html, body {
+      width: 100%;
+      height: 100%;
+    }
+    body {
+      font-family: Verdana, Arial, Helvetica, sans-serif;
+      background-color: rgb(240,255,255);
+      color: #333;
+      box-sizing: content-box;
+      padding: 0 10px;
+    }
+    #content {
+      position: absolute;
+      bottom: 60px;
+      left: 50%;
+      transform: translateX(-50%);
+      max-width: 600px;
+      width: 100%;
+    }
+    .message {
+      border-radius: 3px;
+      padding: 10px 8px;
+      color: #fff;
+      margin-bottom: 3px;
+    }
+    .message.rec {
+      background-color: rgb(0,200,200);
+      float: left;
+      clear: both;
+      position: relative;
+      margin-left: 5px;
+    }
+    .message.rec:after {
+      content: '';
+      display: block;
+      border-right: 5px solid rgb(0,200,200);
+      border-top: 5px solid transparent;
+      border-bottom: 5px solid transparent;
+      position: absolute;
+      top: 50%;
+      left: -5px;
+      transform: translateY(-50%);
+    }
+    .message.sent {
+      margin-right: 5px;
+      background-color: rgb(180,180,180);
+      position: relative;
+      float: right;
+      clear: both;
+    }
+    .message.sent:after {
+      content: '';
+      display: block;
+      border-left: 5px solid rgb(180,180,180);
+      border-top: 5px solid transparent;
+      border-bottom: 5px solid transparent;
+      position: absolute;
+      top: 50%;
+      right: -5px;
+      transform: translateY(-50%);
+    }
+    .chatbox {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      max-width: 600px;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+    }
+    .chatbox input {
+      font-size: 18px;
+      max-width: 100%;
+      border: 2px solid rgb(200,200,200);
+      padding-left: 5px;
+      flex-grow: 1;
+    }
+    .chatbox input:focus {
+      border-color: rgb(0,140,200);
+      outline: none;
+    }
+    .chatbox .button {
+      border-radius: 3px;
+      background-color: rgb(0,140,200);
+      color: rgb(255,255,255);
+      padding: 10px 8px;
+      margin-left: 10px;
+      width: 100px;
+      text-align: center;
+      cursor: pointer;
+    }
+    .chatbox .button:hover {
+      background-color: rgb(0,160,220);
+    }
+  </style>
+</head>
+<body>
+  <div id='content'></div>
+  <div class='chatbox'>
+    <input id='input' type='text' placeholder='Send a message to echo...'>
+    <a id='send' class='button'>Send</a>
+  </div>
+  <script>
+    var content = document.getElementById("content");
+    var input = document.getElementById("input");
+    var send = document.getElementById("send");
+
+    yowl.connect();
+    yowl.onmessage = function(message) {
+      if (message.message) {
+        content.innerHTML += "<div class='message rec'><span class='name'>Echo:</span> " + message.message + "</div>";
+      }
+    };
+    input.onkeypress = function(event) {
+      if (event.which == 13) {
+        sendMessage();
+      }
+    }
+    send.onclick = function() {
+      sendMessage();
+    }
+    function sendMessage() {
+      var value = input.value;
+      content.innerHTML += "<div class='message sent'><span class='name'>You:</span> " + value + "</div>";
+      yowl.send(value);
+      input.value = '';
+    }
+  </script>
+</body>

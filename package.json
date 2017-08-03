@@ -6,12 +6,13 @@
   "dependencies": {
     "yowl": "latest",
     "yowl-classifier-bayes": "latest",
-    "yowl-session-memory": "latest",
-    "yowl-session-rethink": "latest",
-    "yowl-session-redis": "latest",
     "yowl-dialog-manager": "latest",
     "yowl-lock-redis": "latest",
-    "yowl-platform-cli": "latest"
+    "yowl-platform-cli": "latest",
+    "yowl-platform-ws": "^0.1.0",
+    "yowl-session-memory": "latest",
+    "yowl-session-redis": "latest",
+    "yowl-session-rethink": "latest"
   },
   "devDependencies": {
     "jshint": "latest",
