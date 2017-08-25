@@ -4,10 +4,12 @@
   "description": "Examples for the yowl chat bot framework",
   "main": "index.js",
   "dependencies": {
-    "yowl": "latest",
+    "yowl": "^0.5.1",
     "yowl-classifier-bayes": "latest",
     "yowl-dialog-manager": "latest",
+    "yowl-jobs-kue": "latest",
     "yowl-lock-redis": "latest",
+    "yowl-parse-dates": "latest",
     "yowl-platform-cli": "latest",
     "yowl-platform-facebook": "latest",
     "yowl-platform-ws": "latest",
