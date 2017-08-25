@@ -12,6 +12,8 @@ node <example>.js --local
 
 [Basic Echo Bot](examples/echo/bot.js)
 
+[Actions Bot](examples/actions/bot.js)
+
 [Websocket Echo Bot with UI](examples/web/)
 
 [Facebook Echo Bot](examples/facebook/bot.js)
