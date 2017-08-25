@@ -1,10 +1,10 @@
 {
   "name": "yowl-examples",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "Examples for the yowl chat bot framework",
   "main": "index.js",
   "dependencies": {
-    "yowl": "^0.5.1",
+    "yowl": "latest",
     "yowl-classifier-bayes": "latest",
     "yowl-dialog-manager": "latest",
     "yowl-jobs-kue": "latest",

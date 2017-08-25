@@ -7,9 +7,7 @@ bot.name = "Echo Bot";
 var local = require('yowl-platform-cli');
 bot.extend(local);
 
-var queue = Queue({
-  platforms: [local]
-});
+var queue = Queue();
 bot.extend(queue);
 
 queue.process('echo', function(context, event, done) {
