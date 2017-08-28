@@ -1,5 +1,6 @@
-var facebook = require('yowl-platform-facebook');
-var yowl = require('yowl');
+var facebook = require('../../../yowl-platform-facebook');
+var memory = require('yowl-session-memory');
+var yowl = require('../../../yowl');
 
 var bot = yowl();
 
@@ -22,10 +23,22 @@ bot.extend(facebook({ verificationToken: "your-verification-token",
                       accessToken: "your-access-token",
                       webhook: "/facebook/webhook/" }));
 
+bot.use(memory);
+
+bot.use(function(context, event) {
+  return !context.session.profile;
+}, function(context, event, next) {
+  context.profile(function(err, profile) {
+    context.session.profile = profile;
+    next();
+  });
+});
+
 bot.use(function(context, event, callback) {
-  var message = event.message;
+  context.session.echo = event.message;
   setTimeout(function() {
-    event.send(message, callback);
+    console.log(context.session);
+    event.send("{profile.first_name} says '{echo}'", callback);
   }, 500);
 });
 
